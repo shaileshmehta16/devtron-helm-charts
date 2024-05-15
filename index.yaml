@@ -33,6 +33,17 @@ entries:
     urls:
     - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/chart5-0.1.0/chart5-0.1.0.tgz
     version: 0.1.0
+  chart6:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-05-15T12:43:57.538839588Z"
+    description: A Helm chart for Kubernetes
+    digest: 55e780c9e05a08039a103248af6cb62869709c3c3b04a84994d6f4ff32a934f5
+    name: chart6
+    type: application
+    urls:
+    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/chart6-0.1.0/chart6-0.1.0.tgz
+    version: 0.1.0
   demo-chart:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -65,4 +76,4 @@ entries:
     urls:
     - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/my-new-chart-0.1.0/my-new-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-15T12:41:43.030432597Z"
+generated: "2024-05-15T12:43:57.538850027Z"
