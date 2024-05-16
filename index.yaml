@@ -122,6 +122,44 @@ entries:
     urls:
     - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/mariadb-18.0.5/mariadb-18.0.5.tgz
     version: 18.0.5
+  memcached:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: memcached
+          image: docker.io/bitnami/memcached:1.6.27-debian-12-r2
+        - name: memcached-exporter
+          image: docker.io/bitnami/memcached-exporter:0.14.3-debian-12-r7
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r21
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 1.6.27
+    created: "2024-05-16T12:16:05.910012563Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Memcached is an high-performance, distributed memory object caching
+      system, generic in nature, but intended for use in speeding up dynamic web applications
+      by alleviating database load.
+    digest: 1a2f1140479d16276ad4cbe73ce176778373fbb73dd63a047f3f962c54e0daf6
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
+    keywords:
+    - memcached
+    - cache
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: memcached
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/memcached
+    urls:
+    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/memcached-7.0.6/memcached-7.0.6.tgz
+    version: 7.0.6
   nginx:
   - annotations:
       category: Infrastructure
@@ -163,4 +201,4 @@ entries:
     urls:
     - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
     version: 17.0.1
-generated: "2024-05-16T12:06:02.66697976Z"
+generated: "2024-05-16T12:16:05.910023463Z"
