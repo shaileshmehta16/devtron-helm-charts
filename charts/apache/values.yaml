@@ -451,7 +451,7 @@ autoscaling:
 service:
   ## @param service.type Apache Service type
   ##
-  type: LoadBalancer
+  type: ClusterIP
   ## @param service.ports.http Apache service HTTP port
   ## @param service.ports.https Apache service HTTPS port
   ##
