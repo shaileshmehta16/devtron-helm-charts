@@ -13,7 +13,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.4.59
-    created: "2024-05-16T16:43:05.190749+05:30"
+    created: "2024-05-16T18:23:13.387848+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -55,7 +55,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.0.5
-    created: "2024-05-16T12:37:14.125975507Z"
+    created: "2024-05-16T18:23:13.390795+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -65,7 +65,7 @@ entries:
     description: ASP.NET Core is an open-source framework for web application development
       created by Microsoft. It runs on both the full .NET Framework, on Windows, and
       the cross-platform .NET Core.
-    digest: 34b4cc27d0d4a17c064f3a8f327b5f8be555e0f3e31bd7bbc2b019465926af68
+    digest: b2a272beffcb84175d50b3bc9630edd7d60de653acd3b49cb1903e0e46cbb71b
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/aspnet-core/img/aspnet-core-stack-220x234.png
     keywords:
@@ -78,59 +78,20 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/aspnet-core
     urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/aspnet-core-6.0.6/aspnet-core-6.0.6.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/aspnet-core-6.0.6.tgz
     version: 6.0.6
-  cassandra:
-  - annotations:
-      category: Database
-      images: |
-        - name: cassandra
-          image: docker.io/bitnami/cassandra:4.1.4-debian-12-r14
-        - name: cassandra-exporter
-          image: docker.io/bitnami/cassandra-exporter:2.3.8-debian-12-r22
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r21
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 4.1.4
-    created: "2024-05-16T11:49:31.348746469Z"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: Apache Cassandra is an open source distributed database management
-      system designed to handle large amounts of data across many servers, providing
-      high availability with no single point of failure.
-    digest: c898e2ed069167c2bf5fe348fd2ba2ba442ad9685378ff1a3958f70be20cc452
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/cassandra/img/cassandra-stack-220x234.png
-    keywords:
-    - cassandra
-    - database
-    - nosql
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: cassandra
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/cassandra
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/cassandra-11.1.6/cassandra-11.1.6.tgz
-    version: 11.1.6
   devtron-generic-helm:
   - apiVersion: v1
     appVersion: 0.1.0
-    created: "2024-05-16T12:27:11.236113604Z"
+    created: "2024-05-16T18:23:13.391197+05:30"
     description: Chart to deploy any YAML file
-    digest: 58976e2bfdaf823147b8491be01ea1bc095834fa3c4b19e9678b38041abf8633
+    digest: d7ccbf00fb7bc529724f6ea7b41a8fe053cdc0573ef27eaa886c5d8f07251691
     maintainers:
     - email: prashant@devtron.ai
       name: Prashant
     name: devtron-generic-helm
     urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/devtron-generic-helm-0.10.1/devtron-generic-helm-0.10.1.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/devtron-generic-helm-0.10.1.tgz
     version: 0.10.1
   mariadb:
   - annotations:
@@ -145,7 +106,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 11.3.2
-    created: "2024-05-16T12:06:02.666969481Z"
+    created: "2024-05-16T18:23:13.393464+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -155,7 +116,7 @@ entries:
     description: MariaDB is an open source, community-developed SQL database server
       that is widely in use around the world due to its enterprise features, flexibility,
       and collaboration with leading tech firms.
-    digest: 0efe55ba58f0db442eb317cd5f7ea417168016e932521355400fb57514c5c229
+    digest: 69fd340b4caffc09998e557daa74e4985f3111358f36a368e996938359281b94
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
     keywords:
@@ -171,7 +132,7 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
     urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/mariadb-18.0.5/mariadb-18.0.5.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/mariadb-18.0.5.tgz
     version: 18.0.5
   memcached:
   - annotations:
@@ -186,7 +147,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.6.27
-    created: "2024-05-16T12:16:05.910012563Z"
+    created: "2024-05-16T18:23:13.395882+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -196,7 +157,7 @@ entries:
     description: Memcached is an high-performance, distributed memory object caching
       system, generic in nature, but intended for use in speeding up dynamic web applications
       by alleviating database load.
-    digest: 1a2f1140479d16276ad4cbe73ce176778373fbb73dd63a047f3f962c54e0daf6
+    digest: 313dea5143f26d542884d665ec384a6e493e40e1d1f6422e0baf058503de0fd1
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
     keywords:
@@ -209,7 +170,7 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/memcached
     urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/memcached-7.0.6/memcached-7.0.6.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/memcached-7.0.6.tgz
     version: 7.0.6
   nginx:
   - annotations:
@@ -224,7 +185,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.26.0
-    created: "2024-05-16T16:43:05.193845+05:30"
+    created: "2024-05-16T18:23:13.397674+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -252,4 +213,4 @@ entries:
     urls:
     - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
     version: 17.0.1
-generated: "2024-05-16T12:37:14.125987299Z"
+generated: "2024-05-16T18:23:13.385623+05:30"
