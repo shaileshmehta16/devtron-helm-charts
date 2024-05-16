@@ -13,7 +13,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.4.59
-    created: "2024-05-16T08:14:09.209767298Z"
+    created: "2024-05-16T16:43:05.190749+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -23,7 +23,7 @@ entries:
     description: Apache HTTP Server is an open-source HTTP server. The goal of this
       project is to provide a secure, efficient and extensible server that provides
       HTTP services in sync with the current HTTP standards.
-    digest: c81f332c3a85015e5ecc13262c6d9184b74636c3f09e836db8195b11415181a9
+    digest: 8d41a2b129cecc0e1226ba232fd1c900909b23de17d8706a61ce1e96e6443021
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/apache/img/apache-stack-220x234.png
     keywords:
@@ -40,84 +40,8 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/apache
     urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/apache-11.0.5/apache-11.0.5.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/apache-11.0.5.tgz
     version: 11.0.5
-  chart3:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T12:03:00.516425469Z"
-    description: A Helm chart for Kubernetes
-    digest: d7df15d56871b30c81116882def62be38f6b60a589184b3c25cd71a8ac08cd4f
-    name: chart3
-    type: application
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/chart3-0.2.0/chart3-0.2.0.tgz
-    version: 0.2.0
-  chart4:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T12:41:42.943708701Z"
-    description: A Helm chart for Kubernetes
-    digest: 5ea217af9f43dd97035fcc0c16427a7ff700a422741e84611e7e9b7694307011
-    name: chart4
-    type: application
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/chart4-0.4.0/chart4-0.4.0.tgz
-    version: 0.4.0
-  chart5:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T12:41:43.030414042Z"
-    description: A Helm chart for Kubernetes
-    digest: fc2598f42c5d4835b56ba828e6ec6354c135a80bc19b20a555bf075f3f648e3b
-    name: chart5
-    type: application
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/chart5-0.1.0/chart5-0.1.0.tgz
-    version: 0.1.0
-  chart6:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T12:43:57.538839588Z"
-    description: A Helm chart for Kubernetes
-    digest: 55e780c9e05a08039a103248af6cb62869709c3c3b04a84994d6f4ff32a934f5
-    name: chart6
-    type: application
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/chart6-0.1.0/chart6-0.1.0.tgz
-    version: 0.1.0
-  demo-chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T12:03:00.600622247Z"
-    description: A Helm chart for Kubernetes
-    digest: 30fa907e1329507ef1e0bc471658bdd2c4022710074b8bbeee5067dc890bd8f5
-    name: demo-chart
-    type: application
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/demo-chart-0.1.1/demo-chart-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T15:47:38.967983+05:30"
-    description: A Helm chart for Kubernetes
-    digest: 34f0b7379e644e9a1daf54246411c01c13b70e8189ae4243c85ed0c5bdd94593
-    name: demo-chart
-    type: application
-    urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/demo-chart-0.1.0.tgz
-    version: 0.1.0
-  my-new-chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2024-05-15T12:03:00.678600721Z"
-    description: A Helm chart for Kubernetes
-    digest: a4800a8b0c6ff801ea006af5461d09132d958321f8540f8f1477a43b86514f38
-    name: my-new-chart
-    type: application
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/my-new-chart-0.1.0/my-new-chart-0.1.0.tgz
-    version: 0.1.0
   nginx:
   - annotations:
       category: Infrastructure
@@ -131,7 +55,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.26.0
-    created: "2024-05-16T08:49:31.614502428Z"
+    created: "2024-05-16T16:43:05.193845+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -141,7 +65,7 @@ entries:
     description: NGINX Open Source is a web server that can be also used as a reverse
       proxy, load balancer, and HTTP cache. Recommended for high-demanding sites due
       to its ability to provide faster content.
-    digest: 0ec52e1e90bf533c9b3ecbe79a454672d570496dbea35a26eb1cf27c082e4e5f
+    digest: 3d5a6953901ce2f845cd93fb51e32da0c4e34fe04bd16773720e5bffc7554836
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
     keywords:
@@ -157,6 +81,6 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/nginx
     urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/nginx-17.0.1/nginx-17.0.1.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
     version: 17.0.1
-generated: "2024-05-16T08:49:31.614514691Z"
+generated: "2024-05-16T16:43:05.188753+05:30"
