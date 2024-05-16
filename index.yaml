@@ -81,6 +81,19 @@ entries:
     urls:
     - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/cassandra-11.1.6/cassandra-11.1.6.tgz
     version: 11.1.6
+  devtron-generic-helm:
+  - apiVersion: v1
+    appVersion: 0.1.0
+    created: "2024-05-16T12:27:11.236113604Z"
+    description: Chart to deploy any YAML file
+    digest: 58976e2bfdaf823147b8491be01ea1bc095834fa3c4b19e9678b38041abf8633
+    maintainers:
+    - email: prashant@devtron.ai
+      name: Prashant
+    name: devtron-generic-helm
+    urls:
+    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/devtron-generic-helm-0.10.1/devtron-generic-helm-0.10.1.tgz
+    version: 0.10.1
   mariadb:
   - annotations:
       category: Database
@@ -201,4 +214,4 @@ entries:
     urls:
     - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
     version: 17.0.1
-generated: "2024-05-16T12:16:05.910023463Z"
+generated: "2024-05-16T12:27:11.236124765Z"
