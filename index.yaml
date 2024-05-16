@@ -1,5 +1,47 @@
 apiVersion: v1
 entries:
+  apache:
+  - annotations:
+      category: Infrastructure
+      images: |
+        - name: apache
+          image: docker.io/bitnami/apache:2.4.59-debian-12-r4
+        - name: apache-exporter
+          image: docker.io/bitnami/apache-exporter:1.0.7-debian-12-r8
+        - name: git
+          image: docker.io/bitnami/git:2.45.0-debian-12-r2
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2.4.59
+    created: "2024-05-16T08:14:09.209767298Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache HTTP Server is an open-source HTTP server. The goal of this
+      project is to provide a secure, efficient and extensible server that provides
+      HTTP services in sync with the current HTTP standards.
+    digest: c81f332c3a85015e5ecc13262c6d9184b74636c3f09e836db8195b11415181a9
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/apache/img/apache-stack-220x234.png
+    keywords:
+    - apache
+    - http
+    - https
+    - www
+    - web
+    - reverse proxy
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: apache
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/apache
+    urls:
+    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/apache-11.0.5/apache-11.0.5.tgz
+    version: 11.0.5
   chart3:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -76,4 +118,4 @@ entries:
     urls:
     - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/my-new-chart-0.1.0/my-new-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-15T12:43:57.538850027Z"
+generated: "2024-05-16T08:14:09.209781625Z"
