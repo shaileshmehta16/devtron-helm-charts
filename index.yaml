@@ -42,6 +42,47 @@ entries:
     urls:
     - https://shaileshmehta16.github.io/devtron-helm-charts/apache-11.0.5.tgz
     version: 11.0.5
+  mariadb:
+  - annotations:
+      category: Database
+      images: |
+        - name: mariadb
+          image: docker.io/bitnami/mariadb:11.3.2-debian-12-r5
+        - name: mysqld-exporter
+          image: docker.io/bitnami/mysqld-exporter:0.15.1-debian-12-r16
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r21
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 11.3.2
+    created: "2024-05-17T10:55:39.744261281Z"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MariaDB is an open source, community-developed SQL database server
+      that is widely in use around the world due to its enterprise features, flexibility,
+      and collaboration with leading tech firms.
+    digest: eef1012c3cd1be458a384379a53d3268346a97ba87c3162d4867807a065f8f27
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
+    urls:
+    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/mariadb-18.0.5/mariadb-18.0.5.tgz
+    version: 18.0.5
   memcached:
   - annotations:
       category: Infrastructure
@@ -121,4 +162,4 @@ entries:
     urls:
     - https://shaileshmehta16.github.io/devtron-helm-charts/nginx-17.0.1.tgz
     version: 17.0.1
-generated: "2024-05-17T10:53:18.722940819Z"
+generated: "2024-05-17T10:55:39.744272502Z"
