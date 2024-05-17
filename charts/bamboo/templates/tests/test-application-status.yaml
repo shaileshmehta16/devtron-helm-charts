@@ -1,0 +1,70 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "common.names.fullname" . }}-application-status-test"
+  annotations:
+    "helm.sh/hook": test
+    "helm.sh/hook-delete-policy": "before-hook-creation,hook-succeeded"
+    {{- if not .Values.testPods.annotations }}
+    {{- include "bamboo.podAnnotations" . | nindent 4 }}
+    {{- else }}
+    {{- range $key, $value := .Values.testPods.annotations }}
+    {{ $key | quote }}: {{ tpl $value $ | quote }}
+    {{- end }}
+    {{- end }}
+  labels:
+    {{- if not .Values.testPods.labels }}
+    {{- include "common.labels.commonLabels" . | nindent 4 }}
+    {{- else }}
+    {{- range $key, $value := .Values.testPods.labels }}
+    {{ $key | quote }}: {{ tpl $value $ | quote }}
+    {{- end }}
+    {{- end }}
+spec:
+  containers:
+    - name: test
+      image: {{ .Values.testPods.image.statusTestContainer }}
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: STATUS_URL
+          value: "http://{{ include "common.names.fullname" . }}:{{ .Values.bamboo.service.port }}/rest/api/latest/status"
+      command:
+        - /bin/sh
+        - -c
+        - |
+          apk add -q jq curl
+          count=1
+          while [ $count -le 20 ]
+          do
+            STATUS=$(curl -s "$STATUS_URL")
+            RESPONSE_CODE=$(curl -s -o /dev/null -I -w "%{http_code}" "$STATUS_URL")
+            echo "Status URL is: $STATUS_URL"
+            echo "Response code for status test: $RESPONSE_CODE"
+            echo "Verifying application state is RUNNING or FIRST_RUN: $STATUS"
+            echo $STATUS | jq -e '.status|test("RUNNING|FIRST_RUN")'
+            if [ $? == 0 ]; then
+              exit 0
+            fi
+            sleep 10
+            count=$(( $count + 1 ))
+          done
+      {{- with .Values.testPods.resources }}
+      resources:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+  restartPolicy: Never
+  {{- with .Values.testPods.nodeSelector }}
+  nodeSelector:
+  {{- toYaml . | nindent 8 }}
+  {{- end }}
+  {{- with .Values.testPods.affinity }}
+  affinity:
+  {{- toYaml . | nindent 8 }}
+  {{- end }}
+  {{- with .Values.testPods.tolerations }}
+  tolerations:
+  {{- toYaml . | nindent 8 }}
+  {{- end }}
+  {{- if .Values.testPods.schedulerName }}
+  schedulerName: {{ .Values.testPods.schedulerName  | quote }}
+  {{- end }}
