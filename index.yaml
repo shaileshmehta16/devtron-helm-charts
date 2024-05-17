@@ -13,7 +13,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.4.59
-    created: "2024-05-16T18:23:13.387848+05:30"
+    created: "2024-05-17T16:15:56.530435+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -23,7 +23,7 @@ entries:
     description: Apache HTTP Server is an open-source HTTP server. The goal of this
       project is to provide a secure, efficient and extensible server that provides
       HTTP services in sync with the current HTTP standards.
-    digest: 8d41a2b129cecc0e1226ba232fd1c900909b23de17d8706a61ce1e96e6443021
+    digest: 32871dd3cdb5fc0c2d844a3ef2868e0ca62e8902b8ee66294ccd9add273a90d3
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/apache/img/apache-stack-220x234.png
     keywords:
@@ -40,260 +40,8 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/apache
     urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/apache-11.0.5.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/apache-11.0.5.tgz
     version: 11.0.5
-  aspnet-core:
-  - annotations:
-      category: DeveloperTools
-      images: |
-        - name: aspnet-core
-          image: docker.io/bitnami/aspnet-core:8.0.5-debian-12-r0
-        - name: dotnet-sdk
-          image: docker.io/bitnami/dotnet-sdk:8.0.300-debian-12-r0
-        - name: git
-          image: docker.io/bitnami/git:2.45.1-debian-12-r0
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 8.0.5
-    created: "2024-05-16T18:23:13.390795+05:30"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: ASP.NET Core is an open-source framework for web application development
-      created by Microsoft. It runs on both the full .NET Framework, on Windows, and
-      the cross-platform .NET Core.
-    digest: b2a272beffcb84175d50b3bc9630edd7d60de653acd3b49cb1903e0e46cbb71b
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/aspnet-core/img/aspnet-core-stack-220x234.png
-    keywords:
-    - asp.net
-    - dotnet
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: aspnet-core
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/aspnet-core
-    urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/aspnet-core-6.0.6.tgz
-    version: 6.0.6
-  deepspeed:
-  - annotations:
-      category: MachineLearning
-      images: |
-        - name: deepspeed
-          image: docker.io/bitnami/deepspeed:0.14.2-debian-12-r0
-        - name: git
-          image: docker.io/bitnami/git:2.44.0-debian-12-r3
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r19
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 0.14.2
-    created: "2024-05-17T07:29:05.222543532Z"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: DeepSpeed is deep learning software suite for empowering ChatGPT-like
-      model training. Features dense or sparse model inference, high throughput and
-      high compression.
-    digest: eb80d6cb793442a787a4d1a8a9baf9f62dc58ac6c6a8cd1792914352dbd1df01
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/deepspeed/img/deepspeed-stack-220x234.png
-    keywords:
-    - deepspeed
-    - pytorch
-    - python
-    - machine
-    - learning
-    maintainers:
-    - name: VMware, Inc.
-      url: https://github.com/bitnami/charts
-    name: deepspeed
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/deepspeed
-    - https://github.com/bitnami/charts/tree/main/bitnami/pytorch
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/deepspeed-2.0.4/deepspeed-2.0.4.tgz
-    version: 2.0.4
-  devtron-generic-helm:
-  - apiVersion: v1
-    appVersion: 0.1.0
-    created: "2024-05-16T18:23:13.391197+05:30"
-    description: Chart to deploy any YAML file
-    digest: d7ccbf00fb7bc529724f6ea7b41a8fe053cdc0573ef27eaa886c5d8f07251691
-    maintainers:
-    - email: prashant@devtron.ai
-      name: Prashant
-    name: devtron-generic-helm
-    urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/devtron-generic-helm-0.10.1.tgz
-    version: 0.10.1
-  ejbca:
-  - annotations:
-      category: CertificateAuthority
-      images: |
-        - name: ejbca
-          image: docker.io/bitnami/ejbca:8.2.0-1-debian-12-r14
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 8.2.0-1
-    created: "2024-05-17T07:57:12.460636294Z"
-    dependencies:
-    - condition: mariadb.enabled
-      name: mariadb
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - ejbca-database
-      version: 18.x.x
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: EJBCA is an enterprise class PKI Certificate Authority software,
-      built using Java (JEE) technology.
-    digest: 3a554601ae73a03fab7e8373aacf4f1207174351b743603c30ef9bcaca573b07
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/ejbca/img/ejbca-stack-220x234.png
-    keywords:
-    - ejbca
-    - ca
-    - pki
-    - certificate
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: ejbca
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/ejbca
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/ejbca-14.0.3/ejbca-14.0.3.tgz
-    version: 14.0.3
-  etcd:
-  - annotations:
-      category: Database
-      images: |
-        - name: etcd
-          image: docker.io/bitnami/etcd:3.5.13-debian-12-r10
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r21
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 3.5.13
-    created: "2024-05-17T07:41:12.042335089Z"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: etcd is a distributed key-value store designed to securely store
-      data across a cluster. etcd is widely used in production on account of its reliability,
-      fault-tolerance and ease of use.
-    digest: 9967f5944aa1946c5a002b6f6dfe3394387359db5bdb33f22497af7b6462029c
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/etcd/img/etcd-stack-220x234.png
-    keywords:
-    - etcd
-    - cluster
-    - database
-    - cache
-    - key-value
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: etcd
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/etcd
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/etcd-10.0.9/etcd-10.0.9.tgz
-    version: 10.0.9
-  mariadb:
-  - annotations:
-      category: Database
-      images: |
-        - name: mariadb
-          image: docker.io/bitnami/mariadb:11.3.2-debian-12-r5
-        - name: mysqld-exporter
-          image: docker.io/bitnami/mysqld-exporter:0.15.1-debian-12-r16
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r21
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 11.3.2
-    created: "2024-05-16T18:23:13.393464+05:30"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: MariaDB is an open source, community-developed SQL database server
-      that is widely in use around the world due to its enterprise features, flexibility,
-      and collaboration with leading tech firms.
-    digest: 69fd340b4caffc09998e557daa74e4985f3111358f36a368e996938359281b94
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
-    keywords:
-    - mariadb
-    - mysql
-    - database
-    - sql
-    - prometheus
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: mariadb
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
-    urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/mariadb-18.0.5.tgz
-    version: 18.0.5
-  memcached:
-  - annotations:
-      category: Infrastructure
-      images: |
-        - name: memcached
-          image: docker.io/bitnami/memcached:1.6.27-debian-12-r2
-        - name: memcached-exporter
-          image: docker.io/bitnami/memcached-exporter:0.14.3-debian-12-r7
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r21
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 1.6.27
-    created: "2024-05-16T18:23:13.395882+05:30"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: Memcached is an high-performance, distributed memory object caching
-      system, generic in nature, but intended for use in speeding up dynamic web applications
-      by alleviating database load.
-    digest: 313dea5143f26d542884d665ec384a6e493e40e1d1f6422e0baf058503de0fd1
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/memcached/img/memcached-stack-220x234.png
-    keywords:
-    - memcached
-    - cache
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: memcached
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/memcached
-    urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/memcached-7.0.6.tgz
-    version: 7.0.6
   nginx:
   - annotations:
       category: Infrastructure
@@ -307,7 +55,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 1.26.0
-    created: "2024-05-16T18:23:13.397674+05:30"
+    created: "2024-05-17T16:15:56.54064+05:30"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -317,7 +65,7 @@ entries:
     description: NGINX Open Source is a web server that can be also used as a reverse
       proxy, load balancer, and HTTP cache. Recommended for high-demanding sites due
       to its ability to provide faster content.
-    digest: 3d5a6953901ce2f845cd93fb51e32da0c4e34fe04bd16773720e5bffc7554836
+    digest: 2ff6c9e2b4e947f19f28ca4c06fd8cf2e3542949259cc1e69ed8aa8aeeca1190
     home: https://bitnami.com
     icon: https://bitnami.com/assets/stacks/nginx/img/nginx-stack-220x234.png
     keywords:
@@ -333,45 +81,6 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/nginx
     urls:
-    - https://shaileshmehta16.github.io/devtron-helm-charts/charts/nginx-17.0.1.tgz
+    - https://shaileshmehta16.github.io/devtron-helm-charts/nginx-17.0.1.tgz
     version: 17.0.1
-  wildfly:
-  - annotations:
-      category: ApplicationServer
-      images: |
-        - name: os-shell
-          image: docker.io/bitnami/os-shell:12-debian-12-r21
-        - name: wildfly
-          image: docker.io/bitnami/wildfly:32.0.0-debian-12-r0
-      licenses: Apache-2.0
-    apiVersion: v2
-    appVersion: 32.0.0
-    created: "2024-05-17T07:37:28.741432655Z"
-    dependencies:
-    - name: common
-      repository: oci://registry-1.docker.io/bitnamicharts
-      tags:
-      - bitnami-common
-      version: 2.x.x
-    description: Wildfly is a lightweight, open source application server, formerly
-      known as JBoss, that implements the latest enterprise Java standards.
-    digest: 42fdf4eecad26eb3585514dfea7726a700074480844bd51a915a8d64fe3d9e79
-    home: https://bitnami.com
-    icon: https://bitnami.com/assets/stacks/wildfly/img/wildfly-stack-220x234.png
-    keywords:
-    - wildfly
-    - java
-    - http
-    - web
-    - application server
-    - jsp
-    maintainers:
-    - name: Broadcom, Inc. All Rights Reserved.
-      url: https://github.com/bitnami/charts
-    name: wildfly
-    sources:
-    - https://github.com/bitnami/charts/tree/main/bitnami/wildfly
-    urls:
-    - https://github.com/shaileshmehta16/devtron-helm-charts/releases/download/wildfly-20.0.0/wildfly-20.0.0.tgz
-    version: 20.0.0
-generated: "2024-05-17T07:57:12.460645792Z"
+generated: "2024-05-17T16:15:56.527559+05:30"
